@@ -1,1 +1,4 @@
-Comments: 
+3 1 1 gcd . CR
+\ Greatest Common Divisor : gcd ( n1 n2 >>> n3 )
+2dup < if ( we want smaller arg at stack top.)
+swap then ( larger_arg smaller_arg )

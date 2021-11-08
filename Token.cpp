@@ -5,6 +5,8 @@
 
 #include "Token.hpp"
 
+const string myTokens[3] = {"word   ","number  ","strings"};
+
 Token::Token(string tName, TokenType mType) {
     tokenName = tName;
     myType = mType;
@@ -12,8 +14,9 @@ Token::Token(string tName, TokenType mType) {
 }
 
 // print all members
-ofstream &Token::print(ofstream &os) const {
-    os << tokenName << " " << myType << " " << refCount << "\n";
+ostream &Token::print(ostream &os) const {
+    os << tokenName << setw(20) << myTokens[myType] << setw(20) << refCount << "\n";
+    return os;
 }
 
 

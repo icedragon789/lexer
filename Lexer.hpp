@@ -8,13 +8,14 @@
 
 #include "tools.hpp"
 #include "enums.hpp"
+#include "Token.hpp"
 
 class Lexer {
 private:
     StateType state; // initialized to start
     ifstream inputFile;
     ofstream outputFile;
-    map<string, TokenType> lexMap;
+    map<string, Token> lexMap;
     char currentInput;
     string tokenCharacters; // initialized to empty
     TokenType currentToken;
@@ -25,7 +26,9 @@ public:
     void doLex(); // do a lex
     void print(); // print contents of the map to an output file in a readable format
     void doToken(string name, TokenType tt); // helper function when a token is identified
-    int doStart(); // helper function
+    void doStart(); // helper function
+//    void formatLexMap(); // format the map member with proper whitespaces
+
 };
 
 

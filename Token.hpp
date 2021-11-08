@@ -17,12 +17,12 @@ private:
 
 public:
     Token(string tName, TokenType mType); // initialize all three members
-    ofstream& print(ofstream& os) const; // neatly print all members
+    ostream& print(ostream& os) const; // neatly print all members
     void incrCount() { refCount++; };
 };
 
 // Operator overload to call print statement for column object
-inline ofstream& operator <<( ofstream& os, Token& myTk) {
+inline ostream& operator <<( ostream& os, Token& myTk) {
     return myTk.print(os);
 }
 

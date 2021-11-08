@@ -120,3 +120,11 @@ oclock( char* hour)
     hour[8]  = '\0';                      // Add the string terminator.
     return( hour );
 }
+
+// --------------------------------------------------------------------------
+// Fill string x with whitespace until a certain length.
+//      ("A", 10) -> "A         "
+string setStringSpacing(string x, int size) {
+    while(x.length() < size) x+= " ";       // fill in whitespace
+    return x;                               // return whitespace-filled string
+}

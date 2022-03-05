@@ -5,7 +5,6 @@
 #ifndef LEXER_ENUMS_HPP
 #define LEXER_ENUMS_HPP
 
-enum TokenType2{START,STOP,CONTINUE};
 enum TokenType{word,number,strings};
 enum StateType{start, slashPending, acquiringSlash,
         parenPending, acquiringParen, acquiringToken,

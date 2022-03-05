@@ -126,9 +126,6 @@ void Lexer::print() {
     cout << "-----------------------------------------------------" << endl;
     cout << "Name" << setw(20) << "Type" << setw(20) << "Count\n";
 
-    // before printing, lets add whitespace to our map member
-//    formatLexMap();
-
     for (itr = lexMap.begin(); itr != lexMap.end(); ++itr) {
         outputFile << itr->second;
         cout << itr->second;
@@ -171,24 +168,3 @@ void Lexer::doToken(string name, TokenType tt) {
     }
     tokenCharacters = ""; // set token string to empty
 }
-
-//void Lexer::formatLexMap() {
-//    int maxStringSize = 0;
-//    map<string, Token>::iterator it;
-//
-//    for(it=lexMap.begin(); it!=lexMap.end(); ++it){
-//        if(it->first.length()>maxStringSize) maxStringSize = it->first.length(); // find max length string
-//    }
-//
-//    cout << "Max string size:" << maxStringSize << endl;
-//
-//    map<string,Token> lexMap2; // temporary map to hold reformatted strings
-//
-//    // assign formatting and maintain tokens
-//    for(it=lexMap.begin(); it!=lexMap.end(); ++it){
-////        lexMap2[setStringSpacing(it->first, maxStringSize)] = it->second;
-////        auto node = lexMap.extract(it->first);
-//    }
-//
-//    lexMap = lexMap2; // reassign our map to the formatted map
-//}

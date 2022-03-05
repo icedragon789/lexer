@@ -63,4 +63,3 @@ void    fatal( const char* format, ... );
 void   when( char* date, char* hour );
 char*  today( char* date );
 char*  oclock( char* hour );
-string setStringSpacing(string x, int size) ;

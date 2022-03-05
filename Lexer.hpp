@@ -27,8 +27,6 @@ public:
     void print(); // print contents of the map to an output file in a readable format
     void doToken(string name, TokenType tt); // helper function when a token is identified
     void doStart(); // helper function
-//    void formatLexMap(); // format the map member with proper whitespaces
-
 };
 
 

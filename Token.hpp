@@ -19,6 +19,8 @@ public:
     Token(string tName, TokenType mType); // initialize all three members
     ostream& print(ostream& os) const; // neatly print all members
     void incrCount() { refCount++; };
+    string getTName() { return tokenName; } // return string class member
+    void setTName(string tName) { tokenName  = tName; }
 };
 
 // Operator overload to call print statement for column object
